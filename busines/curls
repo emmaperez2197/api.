@@ -1,0 +1,26 @@
+
+
+
+curl --request POST \
+  --url http://localhost:3001/api/user/create \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/8.6.1' \
+  --data '{
+			"email": "test197@gmail.com",
+			"password":  "test1234"
+}'
+
+
+curl --request POST \
+  --url http://localhost:3001/api/user/login \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/8.6.1' \
+  --data '{
+			"email": "test197@gmail.com",
+			"password":  "test1234"
+}'
+
+curl --request GET \
+  --url http://localhost:3001/api/user/list \
+  --header 'Authorization: Bearer  token' \
+  --header 'User-Agent: insomnia/8.6.1'
